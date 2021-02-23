@@ -1,5 +1,18 @@
 <?php
 include("./includes/db.php");
+session_start();
+if(!isset($_SESSION['rol'])){
+    ?>
+    <script> window.location.replace("http://localhost/ISW613CL/Workshop-5/index.php");</script>
+    <?php
+} else {
+    if($_SESSION['rol'] != 1){
+        ?>
+        <script> window.location.replace("http://localhost/ISW613CL/Workshop-5/index.php");</script>
+        <?php
+    }
+}
+
 
 include("./includes/header.php")
 ?>
