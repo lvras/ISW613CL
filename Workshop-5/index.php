@@ -1,6 +1,5 @@
 <?php
     include("./includes/db.php");
-    include("./includes/header.php");
     session_start();
 
     if(isset($_GET['logout'])){
@@ -17,9 +16,7 @@
                 // header("location: index.php");
             break;
             case 2:
-                ?>
-                <script> window.location.replace("http://localhost/ISW613CL/Workshop-5/prueba.php");</script>
-                <?php
+                header('location: prueba.php');
                 break;
             default:
         }
@@ -45,9 +42,7 @@
                     break;
                 case 2:
                     $_SESSION['user'] = $_POST['user'];
-                    ?>
-                    <script> window.location.replace("http://localhost/ISW613CL/Workshop-5/prueba.php");</script>
-                    <?php
+                    header('location: prueba.php');
                     break;
                 default:
             }
@@ -55,7 +50,7 @@
             echo "El usuario o contraseña son incorrectos";
         }
     }
-
+    include("./includes/header.php");
 ?>
   <div class="container">
     <div class="row">
