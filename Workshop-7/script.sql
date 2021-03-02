@@ -1,0 +1,10 @@
+CREATE DATABASE workshop7;
+
+CREATE TABLE students(
+    id INT(11) NOT NULL AUTO_INCREMENT,
+    name VARCHAR(60) NOT NULL,
+    lastname VARCHAR(60) NOT NULL,
+    cedula VARCHAR(20) NOT NULL,
+    age VARCHAR(10) NOT NULL,
+    PRIMARY KEY (id)
+);
